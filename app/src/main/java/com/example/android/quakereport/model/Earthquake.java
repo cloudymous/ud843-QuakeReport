@@ -2,15 +2,17 @@ package com.example.android.quakereport.model;
 
 public class Earthquake {
 
-    private String mMagnitude, mCity, mDate;
+    private double mMagnitude;
+    private String mCity;
+    private long mDate;
 
-    public Earthquake (String cMagnitude, String cCity, String cDate) {
+    public Earthquake(double cMagnitude, String cCity, long cDate) {
         mMagnitude = cMagnitude;
         mCity = cCity;
         mDate = cDate;
     }
 
-    public String getmMagnitude() {
+    public double getmMagnitude() {
         return mMagnitude;
     }
 
@@ -18,7 +20,7 @@ public class Earthquake {
         return mCity;
     }
 
-    public String getmDate() {
+    public long getmDate() {
         return mDate;
     }
 }
