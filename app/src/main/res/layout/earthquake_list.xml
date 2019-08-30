@@ -6,6 +6,17 @@
     android:layout_height="wrap_content"
     android:padding="5dp">
 
+    <TextView
+        android:id="@+id/magnitude"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/mag_circle"
+        android:gravity="center"
+        tools:text="10">
+
+    </TextView>
+
     <LinearLayout
         android:layout_marginStart="5dp"
         android:layout_width="0dp"
@@ -33,17 +44,6 @@
 
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/magnitude"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:background="@drawable/mag_circle"
-        android:gravity="center"
-        tools:text="10">
-
-    </TextView>
 
     <TextView
         android:id="@+id/date"
