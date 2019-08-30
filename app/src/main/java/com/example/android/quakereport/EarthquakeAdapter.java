@@ -67,8 +67,13 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
 
         Date dateObject = new Date(currentEarthquake.getmDate());
         String formatedDate = formatDate(dateObject);
+        String formatedTime = formatTime(dateObject);
+
         TextView dateTextView = (TextView) listItemView.findViewById(R.id.date);
         dateTextView.setText(formatedDate);
+
+        TextView timeTextView = (TextView) listItemView.findViewById(R.id.time);
+        timeTextView.setText(formatedTime);
 
         return listItemView;
     }
@@ -120,6 +125,11 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
     }
 
     private String formatDate(Date dateObject) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("LLL dd, yyyy");
+        return dateFormat.format(dateObject);
+    }
+
+    private String formatTime(Date dateObject) {
         SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
         return timeFormat.format(dateObject);
     }

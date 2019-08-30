@@ -45,14 +45,33 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/date"
+    <LinearLayout
+        android:layout_height="wrap_content"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
         android:layout_weight="2"
-        android:gravity="center"
-        tools:text="Aug 31, 2019">
+        android:gravity="right"
+        android:orientation="vertical"
+        android:padding="5dp">
 
-    </TextView>
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/textColorEarthquakeDetails"
+            tools:text="Aug 30, 2019"></TextView>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/textColorEarthquakeLocation"
+            tools:text="15:08"></TextView>
+
+
+    </LinearLayout>
 
 </LinearLayout>
