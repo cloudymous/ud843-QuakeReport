@@ -43,8 +43,20 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         String primaryLocation;
         String locationOffset;
 
-        TextView cityTextView = (TextView) listItemView.findViewById(R.id.city);
-        cityTextView.setText(originalLocation);
+        if (originalLocation.contains(LOCATION_SEPARATOR)) {
+            String[] parts = originalLocation.split(LOCATION_SEPARATOR);
+            locationOffset = parts[0] + LOCATION_SEPARATOR;
+            primaryLocation = parts[1];
+        } else {
+            locationOffset = getContext().getString(R.string.near_the);
+            primaryLocation = originalLocation;
+        }
+
+        TextView locationOffsetTextView = (TextView) listItemView.findViewById(R.id.offset);
+        locationOffsetTextView.setText(locationOffset);
+
+        TextView primaryLocationTextView = (TextView) listItemView.findViewById(R.id.location);
+        primaryLocationTextView.setText(primaryLocation);
 
         Date dateObject = new Date(currentEarthquake.getmDate());
         String formatedDate = formatDate(dateObject);
