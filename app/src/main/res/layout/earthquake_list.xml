@@ -7,6 +7,16 @@
     android:gravity="center"
     android:padding="5dp">
 
+    <TextView
+        android:id="@+id/magnitude"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/mag_circle"
+        android:gravity="center"
+        tools:text="10">
+
+    </TextView>
+
     <LinearLayout
         android:layout_marginStart="5dp"
         android:layout_width="0dp"
@@ -34,16 +44,6 @@
 
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/magnitude"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:background="@drawable/mag_circle"
-        android:gravity="center"
-        tools:text="10">
-
-    </TextView>
 
     <TextView
         android:id="@+id/date"
