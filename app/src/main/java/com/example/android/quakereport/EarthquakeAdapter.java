@@ -38,8 +38,13 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         String formatedMag = formatMagnitude(currentEarthquake.getmMagnitude());
         magnitudeTextView.setText(formatedMag);
 
+        String originalLocation = currentEarthquake.getmCity();
+
+        String primaryLocation;
+        String locationOffset;
+
         TextView cityTextView = (TextView) listItemView.findViewById(R.id.city);
-        cityTextView.setText(currentEarthquake.getmCity());
+        cityTextView.setText(originalLocation);
 
         Date dateObject = new Date(currentEarthquake.getmDate());
         String formatedDate = formatDate(dateObject);
